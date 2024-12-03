@@ -20,7 +20,7 @@ program
 const options = program.opts();
 
 // List Contents of a directory
-async function listDirectoryContents(filepath: string) {
+async function listDirectoryContents(filepath: string = ".") {
     try {
         const files = await fs.promises.readdir(filepath);
         const detailedFilesPromises = files.map(async (file: string) => {
