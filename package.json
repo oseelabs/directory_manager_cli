@@ -17,8 +17,8 @@
   ],
   "author": "Lazaro Osee Odira",
   "license": "ISC",
-  "repository": "https://github.com/oseelabs/directory_manager",
-  "homepage": "https://github.com/oseelabs/directory_manager#readme",
+  "repository": "https://github.com/oseelabs/directory_manager_cli",
+  "homepage": "https://github.com/oseelabs/directory_manager_cli#readme",
   "dependencies": {
     "commander": "^12.1.0",
     "figlet": "^1.8.0"
