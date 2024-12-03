@@ -1,36 +1,18 @@
+name: "Publish package to npm"
 
-name: Publish to npm
-
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          registry-url: 'https://registry.npmjs.org/'
-          auth-token: ${{ secrets.NPM_TOKEN }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Configure npm authentication
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
-      - name: Debug npm configuration
-        run: npm config ls
-
-      - name: Publish package
-        run: npm publish --access public
-
-
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        registry-url: https://registry.npmjs.org
+    - name: publish
+      run: npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
