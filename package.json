@@ -1,18 +1,24 @@
 {
-  "name": "directory_manager",
+  "name": "@oseelabs/directory_manager",
   "version": "1.0.0",
+  "description": "A simple directory manager CLI",
   "main": "dist/index.js",
   "bin": {
     "dm": "./dist/index.js"
   },
   "scripts": {
-    "build": "npx tsc",
-    "start": "pnpm build && node dist/index.js"
+    "build": "npx tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "directory",
+    "manager",
+    "npmtool"
+  ],
+  "author": "Lazaro Osee Odira",
   "license": "ISC",
-  "description": "",
+  "repository": "https://github.com/oseelabs/directory_manager",
+  "homepage": "https://github.com/oseelabs/directory_manager#readme",
   "dependencies": {
     "commander": "^12.1.0",
     "figlet": "^1.8.0"
