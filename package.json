@@ -1,6 +1,6 @@
 {
   "name": "@oseelaz/directory_manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple directory manager CLI",
   "main": "dist/index.js",
   "bin": {
